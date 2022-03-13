@@ -9,3 +9,29 @@
 // O valor do aumento.
 // O novo salário, após o aumento.
 
+const prompt = require('prompt-sync')();
+
+let salario = +prompt('Digite seu salario: ');
+let aumentoSalario=0;
+
+if(salario <= 280){
+    console.log(`\nSalario antes do resajuste R$ ${salario}`)
+    aumentoSalario = salario * 0.2;
+    salario = aumentoSalario + salario;
+    console.log(`\nVocê teve um aumento de 20% equivalente a R$ ${aumentoSalario}\n\nSeu salario atual é R$ ${salario}`);
+}else if(salario > 280 && salario <=700){
+    console.log(`\nSalario antes do resajuste R$ ${salario}`)
+    aumentoSalario = salario * 0.15;
+    salario = aumentoSalario + salario;
+    console.log(`\nVocê teve um aumento de 20% equivalente a R$ ${aumentoSalario}\n\nSeu salario atual é R$ ${salario}`);
+}else if(salario > 700 && salario < 1500){
+    console.log(`\nSalario antes do resajuste R$ ${salario}`)
+    aumentoSalario = salario * 0.1;
+    salario = aumentoSalario + salario;
+    console.log(`\nVocê teve um aumento de 20% equivalente a R$ ${aumentoSalario}\n\nSeu salario atual é R$ ${salario}`);
+}else{
+    console.log(`\nSalario antes do resajuste R$ ${salario}`)
+    aumentoSalario = salario * 0.05;
+    salario = aumentoSalario + salario;
+    console.log(`\nVocê teve um aumento de 20% equivalente a R$ ${aumentoSalario}\n\nSeu salario atual é R$ ${salario}`);
+}
