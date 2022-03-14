@@ -11,32 +11,23 @@
 // 5 respostas Sim: Você triunfa de maneira inquestionável e seus feitos serão lembrados por muitas gerações.
 // O programa deve contar a história inicial (background), fazer as perguntas, e ao final, exibir o resultado de acordo com as situações acima.
 
-// Para hoje
-
-// Para hoje você deve:
-
-// Construir o rascunho da sua história
-// Criar as variáveis com o prompt para fazer as perguntas e receber as respostas
-// Exibir ao final o valor de cada uma das respostas
-
-//HISTORIA DA JORNADA DO HEROI
-
-// Acordei as 6 para ir trabalhar (pegeuei o busão) ? , estou indo a caminho do trabalho (Cheguei pontual no trabalho) ? No intervalo sai para almoçar e passar na farmacia pra comprar o leite para meu filho (Consegui comprar o leite ?) no final do dia do trabaho consegui atingir a meta (Conseguir atingir a meta?), nesse dia minha esposa esta de aniversario (Dei o parabens pra ela? )
 
 const prompt = require('prompt-sync')();
 
 var i = 0;
 var respostaSim = 0;
 var respostaNao = 0;
-var resposta=['peguei busão', 'cheguei no trabalho pontualmente', 'consegui comprar o leite', 'conseguir atingir a meta', 'dei o parabens pra minha esposa']
+var resposta=['Consegui pegar o busão ?', 'cheguei no trabalho pontualmente ?', 'consegui comprar o leite do meu filho ?', 'conseguir atingir a meta da empresa ?', 'Minha esposa esta de niver hoje. Lembrei de dar o parabens pra minha esposa ?']
 
 console.clear;
+
+// JORNADA DO HEROI 
+console.log('Jornada do Heroi\n\n Acordei as 6 horas da manhã para ir trabalhar, para chegar no trabalho preciso pegar 3 onibus. No intervalo sai para almoçar e passar na farmacia pra comprar o leite para meu filho.  E como é final do mês, tem o fechamento da meta dos funcionários. Nesse dia minha esposa esta de aniversario\n\n');
 
 //5 perguntas para o usuario
 while(i < 5){
     console.log(resposta[i]);
     resposta[i]= +prompt("SIM(1) ou Não(0): ");
-    // console.log()
     if(resposta[i] == 1){
         respostaSim = respostaSim + 1; 
     }else{
@@ -49,7 +40,7 @@ while(i < 5){
 if(respostaSim == 0){
     console.log('voce falha miseravelmente');
 }else if(respostaSim >= 1 && respostaSim <= 2){
-    console.log('você falha, mas ainda consegue fugir da situação.');
+    console.log('você falha, mas ainda consegue fugir da situação.\n\n');
 }else if(respostaSim == 3){
     console.log('Você chega perto de conseguir alcançar seu objetivo, mas acaba falhando por pouco.');
 }else if(respostaSim == 4){
