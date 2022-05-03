@@ -7,8 +7,7 @@ let altura=[];
 let mediaIdade = 0;
 let mediaAltura = 0;
 let i = 0;
-const pessoas = 1;
-
+const pessoas = 5;
 
 while(i < pessoas){
     idade.push(+prompt("Digite a idade: "));
